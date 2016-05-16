@@ -1,0 +1,27 @@
+﻿@model SmallCSharpApp.Models.InputViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("Calculate", "Home"))
+        {
+            @Html.LabelFor(x => x.A)
+            @Html.TextBoxFor(x => x.A)
+
+            @Html.LabelFor(x => x.B)
+            @Html.TextBoxFor(x => x.B)
+
+            <input type="submit" value="Calculate" />
+        }
+    </div>
+</body>
+</html>
