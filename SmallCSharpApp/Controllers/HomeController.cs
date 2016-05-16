@@ -13,7 +13,15 @@ namespace SmallCSharpApp.Controllers
 
         public ActionResult Calculate(int a, int b)
         {
-            return View();
+            var model = new CalculateViewModel
+            {
+                Sum = a + b,
+                Difference = a - b,
+                Product = a * b,
+                Quotient = a / b
+            };
+
+            return View(model);
         }
     }
 }
